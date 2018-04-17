@@ -1,0 +1,39 @@
+.ti-input-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow-y: auto;
+    border: 2px solid #ccc;
+}
+.ti-input {
+    width: 100%;
+    height: 100%;
+}
+.ti-input > span.ti-tag {
+    background-color: #eee;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+ul.ti-list{
+    margin: 0px;
+    padding: 0px;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 10000;
+}
+ul.ti-list>li {
+    min-width: 100px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+ul.ti-list>li:hover{
+    background-color: #eee;
+}
