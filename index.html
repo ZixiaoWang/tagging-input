@@ -8,11 +8,21 @@
     <title>Tagging Input</title>
 </head>
 <body>
+    <h1>Tagging function Test</h1>
+    <p>
+        "@" to trigger the tagging list panel. <br>
+        "space" or "enter" to close tagging list panel
+    </p>
+    <hr>
+
     <div class="ti-input-container" id="taggingContainer">
         <div class="ti-input" id="tagging" contenteditable>
 
         </div>
     </div>
+
+    <br>
+    <button id="postBtn">Post</button>
 
     <script>
         const LIST = [
@@ -21,21 +31,21 @@
             { name: 'Jessica albert' },
             { name: 'Steven Burg' },
             { name: 'Ben Charster' },
-            { name: 'Rose Ran' },
-            { name: 'Jacky Wang' },
-            { name: 'Alan Walker' },
-            { name: 'Jessica albert' },
-            { name: 'Steven Burg' },
-            { name: 'Ben Charster' },
-            { name: 'Rose Ran' },
-            { name: 'Jacky Wang' },
-            { name: 'Alan Walker' },
-            { name: 'Jessica albert' },
-            { name: 'Steven Burg' },
-            { name: 'Ben Charster' },
-            { name: 'Rose Ran' },
+            { name: 'Rose Ran' }
         ]
     </script>
     <script src="./tagging-input.js"></script>
+    <script>
+        let btn = document.getElementById('postBtn');
+        btn.addEventListener(
+            'click',
+            () => {
+                let list = Array.from(input.querySelectorAll('span.ti-tag')).map(tag => {
+                    return tag.innerText;
+                });
+                alert(`You have tagged \n${ list.join(', ') }`);
+            }
+        )
+    </script>
 </body>
 </html>
